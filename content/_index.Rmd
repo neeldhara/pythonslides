@@ -8,25 +8,25 @@ homepageignore: true
 ##The Basics
 
 ###Introduction
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Variables and Expressions
 [Slides](/slides/Lec01.html) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Control Flow: Loops and Conditionals
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+[Slides](/slides/Lec02.html) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Functions
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+ _Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Sequence-based datatypes 1: Lists and Tuples
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+ _Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Sequence-based datatypes 2: Sets
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+ _Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 ###Sequence-based datatypes 3: Dictionaries
-[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+ _Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
 
 
 ##Specific Topics

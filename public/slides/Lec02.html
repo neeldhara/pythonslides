@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Control Flow: Loops and Conditionals</title>
+    <meta charset="utf-8">
+    <meta name="author" content="A part of the series at pythonslides.review" />
+    <link href="libs/remark-css-0.0.1/pythonslides.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Control Flow: Loops and Conditionals
+## Introduction to Python
+### A part of the series at <a href="http://pythonslides.review">pythonslides.review</a>
+### Last Updated: 2018-06-13
+
+---
+
+
+
+&lt;br&gt;
+.center[![Flow Charts](images/flow_charts_xkcd.png)]
+.footnote[From [xkcd](https://xkcd.com/518/).]
+
+---
+
+.left-column-60[
+## A typical Python program
+
+```python
+def function_1(...,...):
+...
+def function_2(...,...):
+...
+.
+.
+.
+def function_k(...,...):
+...
+
+#Comments and so on.
+
+statement_1
+statement_2
+.
+.
+.
+statement_n
+```
+]
+.right-column-40[
+
+## How Python Sees This
+
+&lt;BR&gt;
+
+- The Python interpreter executes statements from top to bottom.
+
+]
+
+---
+
+
+.left-column-60[
+## A typical Python program
+
+```python
+def function_1(...,...):
+...
+def function_2(...,...):
+...
+.
+.
+.
+def function_k(...,...):
+...
+
+#Comments and so on.
+
+statement_1
+statement_2
+.
+.
+.
+statement_n
+```
+]
+.right-column-40[
+
+## How Python Sees This
+
+&lt;BR&gt;
+
+- The Python interpreter executes statements from top to bottom.
+
+- The function definitions and comments (lines starting with the # character) are parsed but not executed.
+
+
+]
+
+---
+
+
+.left-column-60[
+## A typical Python program
+
+```python
+def function_1(...,...):
+...
+def function_2(...,...):
+...
+.
+.
+.
+def function_k(...,...):
+...
+
+#Comments and so on.
+
+statement_1
+statement_2
+.
+.
+.
+statement_n
+```
+]
+.right-column-40[
+
+## How Python Sees This
+
+&lt;BR&gt;
+
+- The Python interpreter executes statements from top to bottom.
+
+- The function definitions and comments (lines starting with the # character) are parsed but not executed.
+
+- Actual computation starts from .red[statement_1]
+]
+
+
+---
+
+# Control Flow
+
+- Need to vary computation sequence as values evolve.
+
+--
+
+- .red[Control flow] determines the order in which statements are executed.
+
+--
+
+  - Conditional Execution
+
+--
+
+     - Do something if something happens.
+--
+
+  - Repeated Execution or _Loops_
+
+--
+     - Do something again and again as long as something is true.
+
+--
+  - Function definitions
+
+--
+     - These blocks don't even execute until you call them.
+
+      - Keeps your codebase organized 😎
+
+
+---
+
+name: inverse
+class: center, middle, inverse
+
+#Control Flow
+## Conditionals
+&lt;br&gt;&lt;br&gt;
+---
+# If-Then-Else
+
+&lt;br&gt;&lt;br&gt;
+
+.center[![IFStory](images/images/IF.jpg)]
+
+---
+
+#If-Then-Else
+
+&lt;br&gt;&lt;br&gt;
+
+From the website .red[[IFTTT](http://www.ifttt.com)]:
+
+&lt;p&gt;&lt;span class="center"&gt;&lt;img src="images/ifttt.png" style="width:100%;" alt="IFTTT1"&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+
+---
+
+#If-Then-Else
+
+
+&lt;p&gt;&lt;span class="center"&gt;&lt;img src="images/ifttt-nasa.png" style="height:500px;" alt="IFTTT2"&gt;&lt;/span&gt;&lt;/p&gt;
+
+---
+
+#If-Then-Else
+
+
+We use conditional executions all the time.
+
+--
+```python
+if (sleepy == True):
+  snooze_alarm()
+else:
+  wakeup()
+```
+
+--
+
+- The statements .blue[snooze_alarm()] and .blue[wakeup()] are executed based on whether .red[sleepy] is .green[True] or .green[False].
+
+--
+
+- The if/else blocks are indented by spaces/tabs. It's important that you are consistent with your usage of spaces and tabs!
+
+--
+
+- The else block is not mandatory.
+
+--
+
+- You can handle multiple scenario cases by using if-elif-else statements.
+
+--
+
+```python
+if (sleepiness == 10):
+  snooze()
+elif (sleepiness == 5):
+  coffee()
+else:
+  wakeup()
+```
+
+
+---
+
+#If-Then-Else
+
+&lt;br&gt;&lt;br&gt;
+.center[![Flow Charts](images/flowchart_if.jpg)]
+
+
+.footnote[.pink[*]From .blue[[Programiz](https://www.programiz.com/python-programming/if-elif-else)].]
+
+---
+
+#If-Then-Else
+
+&lt;br&gt;&lt;br&gt;
+.center[![Flow Charts](images/flowchart_ifelse.jpg)]
+
+
+.footnote[.pink[*]From .blue[[Programiz](https://www.programiz.com/python-programming/if-elif-else)].]
+
+---
+#If-Then-Else
+
+.center[![Flow Charts](images/flowchart_ifelif.jpg)]
+
+
+.footnote[.pink[*]From .blue[[Programiz](https://www.programiz.com/python-programming/if-elif-else)].]
+
+---
+#If-Then-Else
+
+&lt;p&gt;&lt;span class="center"&gt;&lt;img src="images/coin-game.png" style="height:400px;" alt="Coin Game"&gt;&lt;/span&gt;&lt;/p&gt;
+
+
+.footnote[.pink[*]From .blue[[Trust by Nicky Case.](http://ncase.me/trust)].]
+---
+
+name: inverse
+class: center, middle, inverse
+
+#Control Flow
+## Repetition
+&lt;br&gt;&lt;br&gt;
+---
+
+# Loops
+
+&lt;p&gt;&lt;span class="center"&gt;&lt;img src="images/loops.png" style="width:300px;" alt="Loops"&gt;&lt;/span&gt;&lt;/p&gt;
+.footnote[This is [xkcd](https://xkcd.com/1411/) again.]
+---
+
+# Loops - Fixed Iterations
+
+## .blue[Repeating something n times]
+
+--
+
+- Use the .blue[for] statement in such scenarios.
+
+--
+
+```python
+n = 10
+for i in range(n):
+  print(i, end=" ")
+print() # Prints a newline
+```
+
+--
+
+```python
+0 1 2 3 4 5 6 7 8 9
+```
+--
+
+- The code below will print numbers from 5 (.green[inclusive]) to 10 (.red[exclusive]).
+
+--
+
+```python
+x = 5
+y = 10
+for i in range(x,y):
+  print(i, end=" ")
+print() #Prints a newline
+```
+--
+
+```python
+5 6 7 8 9
+```
+
+---
+
+# Loops - Example
+
+--
+
+## .blue[Factors of a number n]
+
+--
+
+List all the factors of a number n.
+
+--
+
+```python
+n = 50
+for i in range(1,n+1):
+  if n%i == 0:
+    print(i)
+```
+
+--
+
+Cutting down the number of iterations:
+
+--
+
+```python
+n = 50
+from math import sqrt
+for i in range(1,int(sqrt(n))+1):
+  if n%i == 0:
+    print(i)
+    print(int(n/i))
+```
+
+---
+
+# Loops - Iterations based on Conditions
+
+--
+
+Often we don't know the number of repetitions in advance.
+
+--
+
+```python
+sleepy = 10
+while(sleepy):
+  snooze()
+  sleepy = sleepy - 1
+```
+
+--
+
+Executes the body if condition evaluates to .red[True].
+
+--
+
+After each iteration, check if condition is True again.
+
+--
+
+☠️ Note that this execution &lt;mark&gt;will not terminate&lt;/mark&gt; if the condition never evaluates to .red[False]!
+
+
+---
+
+#While Control Flow
+
+.center[![Flow Charts](images/flowchart_while.jpeg)]
+
+.footnote[.pink[*]From .blue[[Programiz](https://www.programiz.com/python-programming/while-loop)].]
+
+---
+
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+
+#🎉
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
