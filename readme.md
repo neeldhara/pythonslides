@@ -1,6 +1,8 @@
----
-title: "About"
----
+#Show me the slides
+
+An overview of the slides available form this repository can be viewed [here](http://pythonslides.review) or [here](http://pythonslides.netlify.com).
+
+#Background
 
 When researching for my first offering of a programming course at IIT Gandhinagar, I was quickly overwhelmed by (and also grateful for) all the [great resources](/resources/) that I could find to learn Python. As it turned out, I was in a situation where the classes were held in a non-lab environment (i.e: no computers). I considered the possibility of making every class a live coding session, and potentially recording screencasts to share with the class.
 
@@ -10,4 +12,6 @@ I explored the possibilities of using [Pythontutor](http://pythontutor.com) and 
 
 My original set of slides for the class were written directly in HTML using Remark. For the current version, I am using the xaringan package mostly because of the easy live preview functionality (although there are other ways of getting live preview to work) and my hope that I will eventually take advantage of having xaringan execute the Python blocks in the slides will come in handy --- which I think is the [main distinction](https://slides.yihui.name/xaringan/#15). Considering there is almost no extra work compared to using Remark directly, I decided to make the switch even though all the output examples in the slides at the time of this writing are/were generated manually.
 
-Do feel free to use these slides directly if you find them useful - you can simply access them via the links on the homepage (remember to use the `F` key to run them in fullscreen mode). You could also fork the [GitHub project](https://github.com/neeldhara/pythonslides) or download the files and use them as a baseline for your own customized decks. I would also look forward to any contributions in terms of corrections or additional content.
+#Usage
+
+Do feel free to use these slides directly if you find them useful - you can simply access them via the links on the website [here](http://pythonslides.review) or [here](http://pythonslides.netlify.com) (remember to use the `F` key to run them in fullscreen mode). You could also fork this project or download the files and use them as a baseline for your own customized decks. I would also look forward to any contributions in terms of corrections or additional content.
