@@ -12,36 +12,6 @@
     
     
     <item>
-      <title>Python Slides</title>
-      <link>/_index.knit/</link>
-      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/_index.knit/</guid>
-      <description>##The Basics
-###Introduction Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Variables and Expressions Slides · Coming Soon: Suggested Exercises · Jupyter 🛠 Notebook
-###Control Flow: Loops and Conditionals Slides · Coming Soon: Suggested Exercises · Jupyter 🛠 Notebook
-###Functions Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Sequence-based datatypes 1: Lists and Tuples Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Sequence-based datatypes 2: Sets Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook</description>
-    </item>
-    
-    <item>
-      <title>Python Slides</title>
-      <link>/_index.utf8/</link>
-      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/_index.utf8/</guid>
-      <description>##The Basics
-###Introduction Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Variables and Expressions Slides · Coming Soon: Suggested Exercises · Jupyter 🛠 Notebook
-###Control Flow: Loops and Conditionals Slides · Coming Soon: Suggested Exercises · Jupyter 🛠 Notebook
-###Functions Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Sequence-based datatypes 1: Lists and Tuples Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook
-###Sequence-based datatypes 2: Sets Coming Soon: Slides · Suggested Exercises · Jupyter 🛠 Notebook</description>
-    </item>
-    
-    <item>
       <title>Test Foo Bar</title>
       <link>/post/test-foo-bar/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
