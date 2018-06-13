@@ -181,7 +181,7 @@ class: center, middle, inverse
 
 <br><br>
 
-.center[![IFStory](images/images/IF.jpg)]
+.center[![IFStory](images/IF.jpg)]
 
 ---
 
