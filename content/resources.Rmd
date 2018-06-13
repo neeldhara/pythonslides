@@ -1,0 +1,37 @@
+---
+title: "Resources"
+---
+
+Whether you are a student or professional looking to teach yourself Python, or a teacher looking for resources that can add some excitement to your class, there are plenty of resources online, and I'm sure you can find something that fits your use case.
+
+0. Video Course: [NPTEL course on Programming, Data Structures and Algorithms in Python](https://onlinecourses.nptel.ac.in/noc16_cs11/preview)
+
+Many of the slides on this website are inspired by the flow of content in this course. While there is a strong algorithms backdrop, this is a great introduction to Python.
+
+1. Text: [Automate the boring stuff with Python](https://automatetheboringstuff.com/)
+
+This book has some nice practical information for things like cleaning up data in files, scraping the web, and so forth.
+
+2. Video Course: [Python for Everyone](https://www.youtube.com/playlist?list=PLZm9yAYmyIBidTka0c9PgGRehJvbPMM1h)
+
+A popular and solid introduction to the language. I believe a version of this runs on Coursera as well.
+
+3. Video Course: [The MIT OCW Course on Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/)
+
+_From the website:_ Many of the problem sets focus on specific topics, such as virus population dynamics, word games, optimizing routes, or simulating the movement of a Roomba.
+
+4. Video Course: Coursera's Introduction to Interactive Programming with Python, [Part 1](https://www.coursera.org/learn/interactive-python-1) and [Part 2](https://www.coursera.org/learn/interactive-python-2), offered by Rice University
+
+This has some emphasis on interactive programming, and most of the exercises revolve around building games. This is one of the very few Coursera courses that I did from start to finish because it was so much fun!
+
+5. [Google's Python Class](https://developers.google.com/edu/python/)
+
+Some real-world training, and yet fairly accessible.
+
+6. [Datacamp](http://www.datacamp.com)
+
+The first module in all courses are free. The backdrop is often data science and this makes for very interesting assignments and projects. This also means that there is a lot of early emphasis on packages like NumPy, Pandas and Matplotlib.
+
+Similar platforms include [Pluralsight](http://pluralsight.com/) and [Codeacademy](http://codeacademy.com/). Most of these are partially free - I recommend watching out for Back to School, Black Friday, and Cyber Monday sales if you are not in a hurry.
+
+

@@ -1,0 +1,28 @@
+---
+title: "Python Slides: Basics"
+date: 2018-06-12
+author: Neeldhara Misra
+type: page
+---
+
+###Introduction
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Variables and Expressions
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Control Flow: Loops and Conditionals
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Functions
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 1: Lists and Tuples
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 2: Sets
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 3: Dictionaries
+[Slides](#) · [Recommended Exercises](#) · [Jupyter 🛠 Notebook](#)
+

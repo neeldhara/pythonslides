@@ -1,0 +1,895 @@
+---
+title: "Variables and Expressions"
+subtitle: "Introduction to Python"
+author: "A part of the series at [pythonslides.review](http://pythonslides.review)"
+date: "Last Updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["pythonslides","default","default-fonts"]
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+---
+##Prelude: Syntax and Semantics
+### Syntax: .blue[grammar]
+
+This is about forming grammatically correct sentences. {{ .Site.Title }}
+
+--
+
+.highlight[Harry Sejal love.] ← _This is not even a well-formed sentence._
+
+--
+
+### Static Semantics: .green[meaning]
+
+This is about creating meaningful sentences.
+
+--
+
+.highlight[Harry subtracts Sejal.] ← _This is a well-formed sentence that is not meaningful._
+
+--
+
+### Semantics: .red[intent]
+
+This is about making sure that the meaning matches with your intent.
+
+--
+
+.highlight[Harry killed Sejal.] ← _This is meaningful but wrong!_
+
+---
+
+## A typical Python program
+
+```python
+
+statement_1
+
+def function1(...,...):
+  ...
+
+statement_2
+
+statement_3
+
+def function2(...,...):
+  ...
+
+def function3(...,...):
+  ...
+
+statement_4
+
+.
+.
+.
+
+```
+
+A collection of statements and functions.
+
+--
+
+Are not required to appear in any particular order,
+except that .highlight[a function must be defined before it is called].
+
+---
+
+name: inverse
+class: center, middle, inverse
+
+#Assignment Statements
+---
+
+##Assignment Statements
+
+### Assign a .red[value] to a .red[name].
+
+
+The left hand side is a name (aka .blue[variable]).
+
+The right hand side is an .green[expression].
+
+```python
+i = 5
+j = 2*i
+j = 5*j
+
+course_name = "Computing"
+course_code = "ES112"
+
+```
+
+Operations in the expression .highlight[depend on the types of values being combined].
+
+--
+
+Eg., Arithmetic operations can be performed on numeric values. Strings can be concatenated.
+
+---
+
+name: inverse
+class: center, middle, inverse
+
+#Types
+## Numeric Types
+<br>
+---
+
+# Numeric values
+
+## Flavors of numbers
+
+- Integers (type: .red[int])
+
+  - Eg, .blue[-3, 5, 450, -9034, 234, 3214]
+
+- Floating Point (type: .red[float])
+
+  - Eg, .green[-3.34, 5.5, 23.4, -63.4, 456.434]
+
+--
+
+## int v/s float
+
+- Floating point numbers break up into the .blue[_mantissa_] and the .green[_exponent_].
+
+  - Eg. .blue[.00314159265359] * .green[10^3]
+
+- Internally, a value is stored as a finite sequence of .highlight[zeroes and ones].
+
+---
+
+# Operations on Numbers
+
+- Normal arithmetic operations:
+
+  - addition (.blue[+]), subtraction (.blue[-]), multiplication (.blue[*]), division (.blue[/])
+
+--
+
+  - modulus or remainder (.blue[%]), integer division or quotient (.blue[//])
+
+--
+
+  - Exponentiation (.blue[**])
+
+--
+
+  - Python knows that floats generalize ints.
+
+  - In particular, Python allows you to .highlight[mix .red[ints] and .red[floats]].
+
+--
+
+  - Division _always_ produces floats, even if you are dividing two .red[int]s.
+
+--
+
+  - Addition and multiplication works on .highlight[numbers and sequences].
+
+--
+
+  - Integer division floors the result, instead of rounding towards zero..pink[*]
+
+
+.footnote[.pink[*] Even when negative numbers are divided. [Here's why](http://python-history.blogspot.in/2010/08/why-pythons-integer-division-floors.html).]
+
+
+
+
+
+---
+
+# Operations on Numbers
+
+- Normal arithmetic operations:
+
+  - addition (.blue[+]), subtraction (.blue[-]), multiplication (.blue[*]), division (.blue[/])
+
+  - modulus or remainder (.blue[%]), integer division or quotient (.blue[//])
+
+  - Exponentiation (.blue[**])
+
+```python
+>>> y = 7//3
+>>> print(y)
+2
+>>> type(y)
+<class 'int'>
+```
+```python
+>>> x = 7/3
+>>> print(x)
+2.3333333333333335
+>>> type(x)
+<class 'float'>
+
+```
+
+---
+
+# Operations on Numbers
+
+- Fancy arithmetic operations:
+
+  - .blue[log()], .blue[sqrt()], .blue[sin()], ...
+
+  - Built in, but not available by default.
+
+  - .highlight[import .red[math]]
+
+```python
+>>> help(math.log)
+
+Help on built-in function log in module math:
+
+log(...)
+    log(x[, base])
+
+    Return the logarithm of x to the given base.
+    If the base not specified, returns the natural logarithm (base e) of x.
+```
+
+--
+
+```python
+>>> math.log(2**5,2)
+5.0
+>>> int(math.log(2**5,2))
+5
+```
+---
+
+# Names, Values and Types
+
+### Values have types.
+
+_Types determine what operations make sense._
+
+--
+
+### Names inherit types from their values.
+
+--
+
+  - In many languages, names are _declared_ along with their type.
+
+--
+
+  - Python takes the responsibility of making a .pink[best guess].
+
+--
+
+
+  - The type of a name is not fixed explicitly in advance.
+
+--
+
+
+  - Even worse,...
+
+---
+
+### 🤕 Changing Types
+
+It is possible for names to be assigned values of different types as the program evolves.
+
+--
+
+```python
+i = 5  #i is an int
+```
+--
+```python
+i = 234**2 #still an int...
+```
+--
+```python
+j = i/7 #j is float, creats a float
+```
+--
+```python
+.
+.
+.
+```
+--
+```python
+i = 2*j #i is now a float!  ☠
+
+```
+
+--
+This is not recommended: it is confusing and leads to debugging nightmares.
+
+--
+
+.highlight[Use consistent naming conventions.]
+
+---
+
+name: inverse
+class: center, middle, inverse
+
+#Types
+## Boolean Types
+<br>
+---
+
+# Boolean Types
+.left-column[
+<br><br><br>
+.highlight[.red[True], .red[False]]
+
+```python
+>>> type(True)
+<class 'bool'>
+```
+```python
+>>> type(False)
+<class 'bool'>
+```
+]
+---
+
+# Boolean Types
+.left-column[
+<br><br><br>
+.highlight[.red[True], .red[False]]
+
+```python
+>>> type(True)
+<class 'bool'>
+```
+```python
+>>> type(False)
+<class 'bool'>
+```
+]
+.right-column[
+## Logical Operators: .blue[not], .blue[and], .blue[or]
+
+  - .blue[not] .red[True] is .red[False] and  .blue[not] .red[False] is .red[True]
+
+```python
+>>> not True
+False
+>>> not False
+True
+```
+]
+---
+
+# Boolean Types
+.left-column[
+<br><br><br>
+.highlight[.red[True], .red[False]]
+
+```python
+>>> type(True)
+<class 'bool'>
+```
+```python
+>>> type(False)
+<class 'bool'>
+```
+]
+.right-column[
+## Logical Operators: .blue[not], .blue[and], .blue[or]
+
+  - .blue[and] is the .green[logical AND]: <br>
+  outputs .red[True] exactly when both inputs are .red[True].
+
+```python
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+```
+]
+---
+
+# Boolean Types
+.left-column[
+<br><br><br>
+.highlight[.red[True], .red[False]]
+
+```python
+>>> type(True)
+<class 'bool'>
+```
+```python
+>>> type(False)
+<class 'bool'>
+```
+]
+.right-column[
+## Logical Operators: .blue[not], .blue[and], .blue[or]
+
+  - .blue[and] is the .green[logical OR]: <br>
+  outputs .red[False] exactly when both inputs are .red[False].
+
+```python
+>>> True or True
+True
+>>> True or False
+True
+>>> False or True
+True
+>>> False or False
+False
+```
+]
+---
+
+# Comparison Operators
+
+- Equality (.blue[==]), Not Equals (.blue[!=])
+
+- Greater than or equal to (.blue[\>=]), Less than or equal to (.blue[<=])
+
+- Greater Than (.blue[>]), Less than (.blue[<])
+
+```python
+>>> x = 3
+>>> y = 3.0
+```
+--
+```python
+>>> x == y
+```
+--
+```python
+True
+```
+--
+```python
+>>> type(x) == type(y)
+```
+--
+```python
+False
+```
+--
+```python
+>>> True < False
+False
+```
+
+---
+
+
+name: inverse
+class: center, middle, inverse
+
+#Precedence
+## Who Comes First
+<br>
+---
+
+# Exponentiation
+
+The expression:
+
+.center[
+
+## .red[a**p/q]
+
+]
+
+has two possible interpretations:
+
+.center[
+
+## a\*\*.blue[p/q] v/s .blue[a\*\*p]/q
+
+]
+
+Similarly,
+
+.center[
+
+## .red[-a**b]
+
+]
+
+has two possible interpretations:
+
+.center[
+
+## -a\*\*b v/s .blue[-a]\*\*b
+
+]
+
+---
+
+# From the Manual...
+
+```python
+help('**')
+```
+
+
+The power operator binds .red[more tightly than unary operators on its left; it binds less tightly than unary operators on its right].
+
+--
+
+For int operands, .blue[the result has the same type as the operands unless the second argument is negative]. In that case, all arguments are converted to float and a float result is delivered.
+
+--
+
+<mark>For example, "10\*\*2" returns "100", but "10\*\*-2" returns "0.01".</mark>
+
+--
+
+Raising "0.0" to a negative power results in a "ZeroDivisionError".
+
+--
+
+Raising a negative number to a fractional power results in a "complex"
+number. (In earlier versions it raised a "ValueError".)
+
+
+---
+## Examples
+
+```python
+>>> (4**12)/2
+```
+--
+```python
+8388608.0
+```
+--
+```python
+>>> 4**(12/2)
+```
+--
+```python
+4096.0
+```
+--
+```python
+>>> 4**12/2
+```
+--
+```python
+8388608.0
+```
+--
+```python
+>>> 10**-2
+```
+--
+```python
+0.01
+```
+--
+```python
+>>> -10**2
+```
+--
+```python
+-100
+```
+
+---
+
+# Comparisons
+
+```python
+if a == 3 or b == 3 or c == 3:
+```
+
+V/S.
+
+```python
+if a or b or c == 3:
+```
+
+--
+
+Since OR has a lower precedence than ==, the second statement will be evaluated as:
+
+## .green[(X)] if .blue[a] or .blue[b] or .blue[c == 3]:
+
+--
+
+which is very different from:
+
+## .green[(Y)] if .blue[a == 3] or .blue[b == 3] or .blue[c == 3]:
+
+--
+
+💀 Note that there are values of a,b,c for which X will evaluate to .red[True] while Y will evaluate to .red[False].
+
+---
+
+#The Precedence Table 😴
+
+<table border="1" class="docutils">
+<colgroup>
+<col width="56%">
+<col width="44%">
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="compound_stmts.html#if"><code class="xref std std-keyword docutils literal"><span class="pre">if</span></code></a> – <a class="reference internal" href="compound_stmts.html#else"><code class="xref std std-keyword docutils literal"><span class="pre">else</span></code></a></td>
+<td>Conditional expression</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#or"><code class="xref std std-keyword docutils literal"><span class="pre">or</span></code></a></td>
+<td>Boolean OR</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#and"><code class="xref std std-keyword docutils literal"><span class="pre">and</span></code></a></td>
+<td>Boolean AND</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#not"><code class="xref std std-keyword docutils literal"><span class="pre">not</span></code></a> <code class="docutils literal"><span class="pre">x</span></code></td>
+<td>Boolean NOT</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#in"><code class="xref std std-keyword docutils literal"><span class="pre">in</span></code></a>, <a class="reference internal" href="#not-in"><code class="xref std std-keyword docutils literal"><span class="pre">not</span> <span class="pre">in</span></code></a>,
+<a class="reference internal" href="#is"><code class="xref std std-keyword docutils literal"><span class="pre">is</span></code></a>, <a class="reference internal" href="#is-not"><code class="xref std std-keyword docutils literal"><span class="pre">is</span> <span class="pre">not</span></code></a>, <code class="docutils literal"><span class="pre">&lt;</span></code>,
+<code class="docutils literal"><span class="pre">&lt;=</span></code>, <code class="docutils literal"><span class="pre">&gt;</span></code>, <code class="docutils literal"><span class="pre">&gt;=</span></code>, <code class="docutils literal"><span class="pre">!=</span></code>, <code class="docutils literal"><span class="pre">==</span></code></td>
+<td>Comparisons, including membership
+tests and identity tests</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">|</span></code></td>
+<td>Bitwise OR</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">^</span></code></td>
+<td>Bitwise XOR</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">&amp;</span></code></td>
+<td>Bitwise AND</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">&lt;&lt;</span></code>, <code class="docutils literal"><span class="pre">&gt;&gt;</span></code></td>
+<td>Shifts</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">+</span></code>, <code class="docutils literal"><span class="pre">-</span></code></td>
+<td>Addition and subtraction</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">*</span></code>, <code class="docutils literal"><span class="pre">@</span></code>, <code class="docutils literal"><span class="pre">/</span></code>, <code class="docutils literal"><span class="pre">//</span></code>, <code class="docutils literal"><span class="pre">%</span></code></td>
+<td>Multiplication, matrix
+multiplication division,
+remainder <a class="footnote-reference" href="#id21" id="id15">[5]</a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">+x</span></code>, <code class="docutils literal"><span class="pre">-x</span></code>, <code class="docutils literal"><span class="pre">~x</span></code></td>
+<td>Positive, negative, bitwise NOT</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">**</span></code></td>
+<td>Exponentiation <a class="footnote-reference" href="#id22" id="id16">[6]</a></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+name: inverse
+layout: false
+class: center, middle, inverse
+
+
+#Strings
+## Crunching Text Data
+<br>
+
+---
+
+#Manipulating Text
+
+- Computation is a lot more than number crunching.
+
+--
+
+- Text processing is increasingly important.
+
+--
+
+  - Document preparation
+
+  - Importing/exporting spreadsheet data.
+
+  - Maching queries to content.
+
+--
+
+#String Types
+
+--
+
+- Type string .red[str], a sequence of characters.
+
+--
+
+  - A single character is a string of length one.
+
+  - .highlight[No separate char type.]
+---
+
+
+--
+
+#String Types (Contd.)
+
+- Enclose in quotes: .highlight[single, double or triple.]
+
+--
+
+```python
+s = "ES112 Computing"
+```
+
+--
+
+```python
+>>> w = 'ES112 'Computing''
+  File "<stdin>", line 1
+    w = 'ES112 'Computing''
+                        ^
+SyntaxError: invalid syntax
+```
+--
+```python
+w = 'ES112 \'Computing\''
+x = "ES112 'Computing'"
+```
+--
+```python
+>>> y = "Students say that "ES112 Computing" is their favorite course."
+```
+.red[SyntaxError: invalid syntax]
+
+--
+
+```python
+z = '''Students say that "ES112 Computing" is their favorite course.'''
+```
+
+---
+
+# Strings as Sequences
+
+--
+
+- Strings in Python are a sequence or list of characters.
+
+--
+
+- Positions 0, 1, ..., n-1 for a string of length n
+
+--
+
+- Positions -1, -2, ... count backwards from the end.
+
+---
+
+```python
+>>> s = "hello world"
+```
+--
+```python
+>>> s[0]
+```
+--
+```python
+'h'
+```
+--
+```python
+>>> s[-1]
+```
+--
+```python
+'d'
+```
+--
+```python
+>>> len(s)
+```
+--
+```python
+11
+```
+--
+```python
+>>> s[0:len(s)]
+```
+--
+```python
+'hello world'
+```
+--
+```python
+>>> s[3:7]
+```
+--
+```python
+'lo w'
+```
+
+---
+
+#String Operators
+
+## Concatenation via .blue[+] and Slicing via .blue[:]
+
+--
+
+For strings .green[s] and .green[w], .green[s] .blue[**+**] .green[w] is .green[sw].
+
+--
+
+A .red[slice] is a segment of a string.
+
+--
+
+.blue[s[i:j]] starts at .green[s[i]] and ends at .green[s[j-1]].
+
+--
+
+```python
+>>> s = "hello"
+>>> w = "world"
+>>> s + w
+```
+--
+```python
+'helloworld'
+```
+--
+```python
+>>> s + ' ' + w
+```
+--
+```python
+'hello world'
+```
+
+---
+
+#String Operators
+
+## Concatenation via .blue[+] and Slicing via .blue[:]
+
+--
+```python
+>>> x = "hello world"
+>>> x[0:5] + x[5:]
+```
+--
+```python
+'hello world'
+```
+
+```python
+>>> x = "hello world"
+>>> x[0:5] + x[5:0]
+```
+--
+```python
+'hello worl'
+```
+--
+```python
+>>> x = "hello world"
+>>> x[5]
+```
+--
+```python
+' '
+```
+
+---
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+#🎉

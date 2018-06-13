@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+When researching for my first offering of a programming course at IIT Gandhinagar, I was quickly overwhelmed by (and also grateful for) all the [great resources](/resources/) that I could find to learn Python.
+
+However, I was in a situation where the classes were held in a non-lab environment (i.e: no computers). I considered the possibility of making every class a live coding session, and potentially recording screencasts to share with the class.
+
+However, after watching the the lectures from the  [NPTEL course on Programming, Data Structures and Algorithms in Python](https://onlinecourses.nptel.ac.in/noc16_cs11/preview), I realized that creating slides was perhaps a more organized way of delivering the material.
+
+I explored using Pythontutor and embedding REPLs from REPL.it in the class.

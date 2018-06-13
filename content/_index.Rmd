@@ -1,0 +1,87 @@
+---
+title: "Python Slides"
+date: 2018-06-12
+author: Neeldhara Misra
+homepageignore: true
+---
+
+##The Basics
+
+###Introduction
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Variables and Expressions
+[Slides](/slides/Lec01.html) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Control Flow: Loops and Conditionals
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Functions
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 1: Lists and Tuples
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 2: Sets
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Sequence-based datatypes 3: Dictionaries
+[Slides](#) · _Coming Soon:_ [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+
+##Specific Topics
+
+###Regular Expressions
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###File Handling
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Ideas from Functional Programming
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Testing
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Object-Oriented Programming
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Design Patterns
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+##Package-Specific Overviews
+
+###NumPy and Matplotlib
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Pandas
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Networkx
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###SciPy
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Requests and BeautifulSoup
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+###Django
+_Coming Soon:_ [Slides](#) · [Suggested Exercises](#) · [Jupyter 🛠 Notebook](#)
+
+##Miscellaneous Topics
+
+###Documentation and Version Control
+_Coming Soon:_ [Slides](#)
+
+###Data Visualization Principles
+_Coming Soon:_ [Slides](#)
+
+###Automated Grading of Programming Assignments
+_Coming Soon:_ [Slides](#)
+
+###Coding Style and Text Editors
+_Coming Soon:_ [Slides](#)
+
+###Debugging Principles
+_Coming Soon:_ [Slides](#)

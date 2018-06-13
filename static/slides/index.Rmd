@@ -1,0 +1,50 @@
+---
+title: "Welcome 🤖"
+subtitle: "Introduction to Python"
+author: "A part of the series at [pythonslides.review](http://pythonslides.review)"
+date: "Last Updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["pythonslides","default","default-fonts"]
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+#Readme
+
+--
+
+Please visit the [homepage](http://pythonslides.review) for an index of all the slides on this website.
+
+--
+
+At the time of this writing, this material should be considered a zeroth draft.red[*].
+
+
+
+.footnote[.red[*] Therefore, please use it with caution 🤕]
+---
+
+#Readme
+
+Please visit the [homepage](http://pythonslides.review) for an index of all the slides on this website.
+
+At the time of this writing, this material should be considered a zeroth draft.red[*].
+
+.footnote[.red[*] Therefore, please use it with caution 🤕]
+--
+
+You are welcome to make your version of these slides.
+
+--
+
+Please download the files from the GitHub repository.
+
+
+---
+class: center, inverse, middle
+
+#🎉
